@@ -1,2 +1,5 @@
-# responsive-animated-slider
-Responsive and animated Slider made in React
+# Responsive and animated slider
+
+## Using React, animations and React Hooks!
+
+A colaborative proyect made by @pyritewolf, @bcardiff, @danimibas and myself.
