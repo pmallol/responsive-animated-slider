@@ -2,7 +2,7 @@
 
 #### Using React, animations and React Hooks!
 
-A colaborative proyect made by @pyritewolf, @bcardiff, @danimibas and myself.
+A colaborative proyect made by [@pyritewolf](https://github.com/pyritewolf), [@bcardiff](https://github.com/bcardiff/), [@danimibas](https://github.com/danimibas) and myself.
 
 ### Technical overview
 
