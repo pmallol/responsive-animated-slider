@@ -1,0 +1,32 @@
+.slider {
+  min-height: calc(var(--slider)/1.5);
+  min-width: calc(var(--slider)/2);
+  width: var(--slider);
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slider > div:first-child {
+  background: rgba(var(--white), 0.2);
+  width: 300%; /* TODO: make it a variable for the amount of cards inside the slider */
+  height: calc(var(--slider)/1.8);
+  position: absolute;
+  border-radius: .5rem;
+  box-shadow: 5px 0px 20px 0px rgba(0, 0, 0, .8);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  flex-basis: calc(var(--slider)/1.1);
+  background-color: rgba(var(--orange));
+  background-size: cover;
+  height: calc(var(--slider)/2);
+  border-radius: .3rem;
+  cursor: pointer;
+}
