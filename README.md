@@ -1,8 +1,8 @@
-# Responsive and animated slider
+# Responsive Animated Slider
 
 ![](demo-slider.gif)
 
-#### Using React, animations and React Hooks
+_Using React, animations and React Hooks_
 
 A colaborative proyect made by [@pyritewolf](https://github.com/pyritewolf), [@bcardiff](https://github.com/bcardiff/), [@danimibas](https://github.com/danimibas), [@hdf1986](https://github.com/hdf1986) and [@pmallol](https://github.com/pmallol).
 
@@ -20,3 +20,4 @@ The slider was built using the following technologies:
 1) Clone this repo
 2) In a console run `$ yarn install`
 3) Run `$ yarn start` to get started
+4) Open a browser at `http://localhost:3000/`
