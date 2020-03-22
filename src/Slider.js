@@ -5,11 +5,13 @@ import { useDrag } from 'react-use-gesture'
 import './Slider.css'
 
 const V_THRESHOLD = 0.2
-const scc = [
+const colors = [
   '--cyan',
   '--purple',
-  '--orange',
+  '--orange'
 ]
+const cards = colors.length
+const cardsCount = colors => document.documentElement.style.setProperty('--cards', cards)
 
 export default function Slider() {
   const [xPos, setXPos] = useState(0)
@@ -20,7 +22,7 @@ export default function Slider() {
   const bind = useDrag(({ last, vxvy: [vx] }) => {
     if (last) {
       // swipe left is when horizontal velocity is inferior to minus threshold
-      if (vx < -V_THRESHOLD && xPos > -2) {
+      if (vx < -V_THRESHOLD && xPos > -cards + 1) {
         setXPos(xp => xp - 1);
       }
       // swipe right is when horizontal velocity is superior to threshold
@@ -28,13 +30,15 @@ export default function Slider() {
     }
   })
 
+  cardsCount()
+
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
     <div className="slider">
       <animated.div {...bind()} style={{ x }}>
-        {scc.map((src, i) => (
+        {colors.map((src, i) => (
           <div
-            key={i}
+            key={`card${i}`}
             className="card"
             style={{backgroundColor: `rgba(var(${src}))`}}
           />

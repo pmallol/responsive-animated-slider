@@ -12,7 +12,7 @@
 
 .slider > div:first-child {
   background: rgba(var(--white), 0.2);
-  width: 300%; /* TODO: make it a variable for the amount of cards inside the slider */
+  width: calc(var(--cards) * 100%);
   height: calc(var(--slider)/1.8);
   position: absolute;
   border-radius: .5rem;
