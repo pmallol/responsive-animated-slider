@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
-import { useDrag } from 'react-use-gesture';
+import React, { useState } from 'react'
+import { useSpring, animated } from 'react-spring'
+import { useDrag } from 'react-use-gesture'
 
-import './Slider.css';
+import './Slider.css'
 
-const V_THRESHOLD = 0.2;
+const V_THRESHOLD = 0.2
 const scc = [
   '--cyan',
   '--purple',
@@ -14,14 +14,13 @@ const scc = [
 export default function Slider() {
   const [xPos, setXPos] = useState(0)
   const { x } = useSpring({
-    x: xPos * 400
+    x: xPos * 600
   })
 
   const bind = useDrag(({ last, vxvy: [vx] }) => {
     if (last) {
       // swipe left is when horizontal velocity is inferior to minus threshold
-      if (vx < -V_THRESHOLD && xPos > -1) {
-        console.log(xPos, vx);
+      if (vx < -V_THRESHOLD && xPos > -2) {
         setXPos(xp => xp - 1);
       }
       // swipe right is when horizontal velocity is superior to threshold
@@ -33,13 +32,13 @@ export default function Slider() {
   return (
     <div className="slider">
       <animated.div {...bind()} style={{ x }}>
-      {scc.map((src, i) => (
-        <div 
-          key={i} 
-          className="card" 
-          style={{backgroundColor: `rgba(var(${src}))`}}
-        />
-      ))}
+        {scc.map((src, i) => (
+          <div
+            key={i}
+            className="card"
+            style={{backgroundColor: `rgba(var(${src}))`}}
+          />
+        ))}
       </animated.div>
     </div>
   )
